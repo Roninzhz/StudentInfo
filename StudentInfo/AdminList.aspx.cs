@@ -82,6 +82,7 @@ namespace StudentInfo
 
         protected void btnout_Click(object sender, EventArgs e)
         {
+            this.grdadmin.Columns[4].Visible = false;
             Response.Clear();
             Response.AddHeader("content-disposition",
             "attachment;filename=管理员列表.xls");
