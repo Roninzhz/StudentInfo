@@ -70,6 +70,7 @@
     <Content Include="fonts\iconfont.eot" />
     <Content Include="fonts\iconfont.ttf" />
     <Content Include="fonts\iconfont.woff" />
+    <Content Include="index_stu.aspx" />
     <Content Include="lib\layui\font\iconfont.eot" />
     <Content Include="lib\layui\font\iconfont.ttf" />
     <Content Include="lib\layui\font\iconfont.woff" />
@@ -273,6 +274,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index_stu.aspx.cs">
+      <DependentUpon>index_stu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index_stu.aspx.designer.cs">
+      <DependentUpon>index_stu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

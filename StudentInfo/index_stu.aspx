@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="StudentInfo.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index_stu.aspx.cs" Inherits="StudentInfo.index_stu" %>
 
-<!DOCTYPE html  class="x-admin-sm">
+<!DOCTYPE html class="x-admin-sm">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -101,36 +101,36 @@
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont">&#xe70b;</i>
-                            <cite>学生管理</cite>
+                            <cite>我的信息</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('学生信息录入','StudentAdd.aspx')">
+                                <a onclick="xadmin.add_tab('个人信息','StudentInfo.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>学生信息录入</cite></a>
+                                    <cite>个人信息</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('学生信息查询','StudentFind.aspx')">
+                                <a onclick="xadmin.add_tab('课程安排','#')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>学生信息查询</cite></a>
+                                    <cite>课程安排</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('学生信息查看','StudentInfo.aspx')">
+                                <a onclick="xadmin.add_tab('成绩信息','#')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>学生信息查看</cite></a>
+                                    <cite>成绩信息</cite></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li">&#xe723;</i>
-                            <cite>课程管理</cite>
+                            <cite>我的课程</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('添加课程','CourseAdd.aspx')">
+                                <a onclick="xadmin.add_tab('挑选课程','cate.html')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>添加课程</cite></a>
+                                    <cite>挑选课程</cite></a>
                             </li>
                             <li>
                                 <a onclick="xadmin.add_tab('查看课程','cate.html')">
@@ -142,45 +142,13 @@
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li">&#xe723;</i>
-                            <cite>通知管理</cite>
+                            <cite>教学评价</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('新闻列表','city.html')">
+                                <a onclick="xadmin.add_tab('教学评价','city.html')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>新闻列表</cite></a>
-                            </li>
-                        </ul>
-                        <ul class="sub-menu">
-                            <li>
-                                <a onclick="xadmin.add_tab('新闻一览','city.html')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>新闻一览</cite></a>
-                            </li>
-                        </ul>
-                        <ul class="sub-menu">
-                            <li>
-                                <a onclick="xadmin.add_tab('新闻编写','city.html')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>新闻编写</cite></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="iconfont left-nav-li">&#xe726;</i>
-                            <cite>信息维护</cite>
-                            <i class="iconfont nav_right">&#xe697;</i></a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a onclick="xadmin.add_tab('管理员列表','AdminList.aspx')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>管理员列表</cite></a>
-                            </li>
-                            <li>
-                                <a onclick="xadmin.add_tab('管理员添加','AdminAdd.aspx')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>管理员添加</cite></a>
+                                    <cite>教学评价</cite></a>
                             </li>
                         </ul>
                     </li>
@@ -218,4 +186,3 @@
     </form>
 </body>
 </html>
-

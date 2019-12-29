@@ -27,7 +27,7 @@ namespace StudentInfo
             IList<admin_userEntity> users = dALadmin_User.Getadmin_usersbyCondition("userName='" + username + "' and userPassword='" + password + "'");
             if (users.Count > 0&& cookie.Value == CheckCode.Value)
             {
-                Session["uName"] = "你好，管理员："+username;
+                Session["uName"] = username;
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index.aspx';</script>");
             }
             else
@@ -45,8 +45,8 @@ namespace StudentInfo
             IList<student_infoEntity> students = dALstudent_Info.Getstudent_infosbyCondition("studentName='" + username + "' and StudentPassword='" + password + "'");
             if (students.Count> 0 && cookie.Value == CheckCode.Value)
             {
-                Session["uName"] = "学生：" + username;
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index.aspx';</script>");
+                Session["uName"] =username;
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index_stu.aspx';</script>");
             }
             else
             {

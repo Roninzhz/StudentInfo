@@ -86,6 +86,7 @@ namespace StudentInfo
             Response.AddHeader("content-disposition",
             "attachment;filename=管理员列表.xls");
             Response.Charset = "gb2312";
+            Response.ContentEncoding = System.Text.Encoding.Default;
             Response.ContentType = "application/vnd.xls";
             System.IO.StringWriter stringWrite = new System.IO.StringWriter();
             System.Web.UI.HtmlTextWriter htmlWrite =
