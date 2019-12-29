@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>学生查找</title>
     <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="./js/xadmin.js"></script>
 </head>
 <body>
-     <div class="x-nav">
+    <div class="x-nav">
         <span class="layui-breadcrumb">
             <a href="#">首页</a>
             <a href="#">演示</a>
@@ -29,6 +29,9 @@
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
+                    <div class="layui-card-header">
+                        <button class="layui-btn" onclick="xadmin.open('添加学生','StudentAdd.aspx',800,600)"><i class="layui-icon"></i>添加</button>
+                    </div>
                     <form class="layui-form layui-col-space5" runat="server">
                         <div class="layui-card-body ">
                             <div class="layui-inline layui-show-xs-block">
@@ -36,6 +39,7 @@
                             </div>
                             <div class="layui-inline layui-show-xs-block">
                                 <asp:Button ID="btnselect" runat="server" CssClass="layui-btn" Text="查找" OnClick="btnselect_Click"></asp:Button>
+                                <asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>
                             </div>
                         </div>
                         <div class="layui-card-body ">
@@ -61,11 +65,10 @@
                                     </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
-                            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [admin_user] WHERE ([UserName] = @UserName)">
-                            </asp:SqlDataSource>
+                            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [admin_user] WHERE ([UserName] = @UserName)"></asp:SqlDataSource>
                         </div>
-                        </form>
-                </div>                
+                    </form>
+                </div>
             </div>
         </div>
     </div>

@@ -12,7 +12,10 @@ namespace StudentInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)//页面首次加载自动执行
+            {
+                LoadData();
+            }
         }
 
         public void LoadData()
@@ -70,6 +73,31 @@ namespace StudentInfo
         protected void btnselect_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        protected void btnout_Click(object sender, EventArgs e)
+        {
+            this.grdusers.Columns[10].Visible = false;
+            Response.Clear();
+            Response.AddHeader("content-disposition",
+            "attachment;filename=个人信息列表.xls");
+            Response.Charset = "gb2312";
+            Response.ContentEncoding = System.Text.Encoding.Default;
+            Response.ContentType = "application/vnd.xls";
+            System.IO.StringWriter stringWrite = new System.IO.StringWriter();
+            System.Web.UI.HtmlTextWriter htmlWrite =
+            new HtmlTextWriter(stringWrite);
+            grdusers.AllowPaging = false;
+            LoadData();
+            grdusers.RenderControl(htmlWrite);
+            Response.Write(stringWrite.ToString());
+            Response.End();
+            grdusers.AllowPaging = true;
+            LoadData();
+        }
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            // Confirms that an HtmlForm control is rendered for
         }
     }
 }

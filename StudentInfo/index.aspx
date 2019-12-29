@@ -110,12 +110,7 @@
                                     <cite>学生信息录入</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('学生信息查询','StudentFind.aspx')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>学生信息查询</cite></a>
-                            </li>
-                            <li>
-                                <a onclick="xadmin.add_tab('学生信息查看','StudentInfo.aspx')">
+                                <a onclick="xadmin.add_tab('学生信息查看','StudentFind.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生信息查看</cite></a>
                             </li>
@@ -133,9 +128,9 @@
                                     <cite>添加课程</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('查看课程','cate.html')">
+                                <a onclick="xadmin.add_tab('课程信息查看','cate.html')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>查看课程</cite></a>
+                                    <cite>课程信息查看</cite></a>
                             </li>
                         </ul>
                     </li>
