@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>学生信息</title>
     <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -17,9 +17,9 @@
 <body>
     <form id="form1" runat="server">
         <asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>
-        <div class="layui-card-body ">
+        <div class="layui-card-body " style="width:auto; left: -30px; top: 2px;">
             <asp:GridView ID="grdusers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
-                CssClass="layui-table layui-form" PageSize="3">
+                CssClass="layui-table layui-form" PageSize="3" OnRowCommand="grdusers_RowCommand" OnRowCreated="grdusers_RowCreated" style="margin-right: 0">
                 <Columns>
                     <asp:BoundField DataField="StudentId" HeaderText="学号" SortExpression="StudentId" />
                     <asp:BoundField DataField="StudentPassword" HeaderText="学生密码" SortExpression="StudentPassword" />
@@ -31,11 +31,15 @@
                     <asp:BoundField DataField="StudentClass" HeaderText="班级" SortExpression="StudentClass" />
                     <asp:BoundField DataField="StudentDormitory" HeaderText="宿舍号" SortExpression="StudentDormitory" />
                     <asp:BoundField DataField="StudentAddress" HeaderText="住址" SortExpression="StudentAddress" />
+                    <asp:TemplateField HeaderText="操作">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lb1" CommandName="edit" runat="server">编辑</asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [student_info] WHERE ([StudentName] = @StudentName)">
-            </asp:SqlDataSource>
-            </div>
+            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [student_info] WHERE ([StudentName] = @StudentName)"></asp:SqlDataSource>
+        </div>
     </form>
 </body>
 </html>

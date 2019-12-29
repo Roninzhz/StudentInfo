@@ -29,8 +29,31 @@ namespace StudentInfo
             grdusers.DataBind();
         }
 
+        protected void grdusers_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                LinkButton lb1 = (LinkButton)e.Row.FindControl("lb1");
+                lb1.CommandArgument = e.Row.RowIndex.ToString();//为每个操作对象设定行号信息。
+            }
+        }
+
+        protected void grdusers_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int rowindex = int.Parse(e.CommandArgument.ToString());//获取操作行的行号
+            string Id = grdusers.DataKeys[rowindex].Value.ToString();//获取操作行数据的主键Id
+            DALadmin_user dal = new DALadmin_user();//定义针对admin_user表的操作对象
+
+            switch (e.CommandName)//获取操作对象的命令
+            {
+                case "edit"://调转到编辑页面
+                    Response.Redirect("PasswordMod.aspx?id=" + Id);
+                    break;
+            }
+        }
         protected void btnout_Click(object sender, EventArgs e)
         {
+            this.grdusers.Columns[10].Visible = false;
             Response.Clear();
             Response.AddHeader("content-disposition",
             "attachment;filename=个人信息列表.xls");
