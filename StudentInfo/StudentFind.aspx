@@ -59,10 +59,11 @@
                                     <asp:BoundField DataField="StudentAddress" HeaderText="住址" SortExpression="StudentAddress" />
                                     <asp:TemplateField HeaderText="操作">
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="lb2" CommandName="del" runat="server" OnClientClick="javascript:return confirm('确定删除吗?');">删除</asp:LinkButton>||
-                                            <asp:LinkButton ID="lb3" CommandName="reset" runat="server" ToolTip="重置当前用户的密码">重置</asp:LinkButton>
+                                             <asp:LinkButton ID="lb1" CommandName="edit" runat="server">编辑</asp:LinkButton>||
+                                             <asp:LinkButton ID="lb2" CommandName="del" runat="server" OnClientClick="javascript:return confirm('确定删除吗?');">删除</asp:LinkButton>||
+                                             <asp:LinkButton ID="lb3" CommandName="reset" runat="server" ToolTip="重置当前用户的密码" OnClientClick="javascript:return confirm('确定重置当前用户的密码吗?');">重置</asp:LinkButton>
                                         </ItemTemplate>
-                                    </asp:TemplateField>
+                                    </asp:TemplateField>    
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [admin_user] WHERE ([UserName] = @UserName)"></asp:SqlDataSource>
