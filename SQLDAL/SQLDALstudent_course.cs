@@ -1,11 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using DBUtility;
 using Model;
-using DBUtility;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
 namespace SQLDAL
 {
     #region class SQLDALstudent_course
@@ -230,9 +228,9 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-			new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseScore,SqlDbType.Decimal)			};
+            new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseScore,SqlDbType.Decimal)            };
                 SQLHelper.CacheParameters("SQL_ALL_student_course_Insert", parms);
             }
             return parms;
@@ -248,10 +246,10 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseScore,SqlDbType.Decimal)					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseScore,SqlDbType.Decimal)                    };
                 SQLHelper.CacheParameters("SQL_ALL_student_course_Update", parms);
             }
             return parms;
@@ -267,8 +265,8 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    };
                 SQLHelper.CacheParameters("SQL_PrimaryKey_student_course", parms);
             }
             return parms;

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using DBUtility;
 using Model;
-using DBUtility;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
 namespace SQLDAL
 {
     #region class SQLDALcourse
@@ -244,11 +242,11 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-			new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseName,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseTeacher,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseInfo,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_CourseStudentNum,SqlDbType.Int)			};
+            new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseName,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseTeacher,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseInfo,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_CourseStudentNum,SqlDbType.Int)           };
                 SQLHelper.CacheParameters("SQL_ALL_course_Insert", parms);
             }
             return parms;
@@ -264,12 +262,12 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseName,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseTeacher,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseInfo,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_CourseStudentNum,SqlDbType.Int)					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    new SqlParameter(PARA_CourseId,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseName,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseTeacher,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseInfo,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_CourseStudentNum,SqlDbType.Int)                   };
                 SQLHelper.CacheParameters("SQL_ALL_course_Update", parms);
             }
             return parms;
@@ -285,8 +283,8 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    };
                 SQLHelper.CacheParameters("SQL_PrimaryKey_course", parms);
             }
             return parms;

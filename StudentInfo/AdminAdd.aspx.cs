@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Model;
+﻿using Model;
 using SQLDAL;
-using System.IO;
-using System.Data.OleDb;
+using System;
 using System.Data;
+using System.Data.OleDb;
+using System.IO;
 using System.Text;
 
 namespace StudentInfo

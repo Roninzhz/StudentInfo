@@ -1,11 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using DBUtility;
 using Model;
-using DBUtility;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
 namespace SQLDAL
 {
     #region class SQLDALnew
@@ -244,11 +242,11 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-			new SqlParameter(PARA_Title,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_Author,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_ReleaseTime,SqlDbType.DateTime) ,
-			new SqlParameter(PARA_Content,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_RelateFile,SqlDbType.VarChar)			};
+            new SqlParameter(PARA_Title,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_Author,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_ReleaseTime,SqlDbType.DateTime) ,
+            new SqlParameter(PARA_Content,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_RelateFile,SqlDbType.VarChar)         };
                 SQLHelper.CacheParameters("SQL_ALL_news_Insert", parms);
             }
             return parms;
@@ -264,12 +262,12 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					new SqlParameter(PARA_Title,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_Author,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_ReleaseTime,SqlDbType.DateTime) ,
-					new SqlParameter(PARA_Content,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_RelateFile,SqlDbType.VarChar)					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    new SqlParameter(PARA_Title,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_Author,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_ReleaseTime,SqlDbType.DateTime) ,
+                    new SqlParameter(PARA_Content,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_RelateFile,SqlDbType.VarChar)                 };
                 SQLHelper.CacheParameters("SQL_ALL_news_Update", parms);
             }
             return parms;
@@ -285,8 +283,8 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    };
                 SQLHelper.CacheParameters("SQL_PrimaryKey_news", parms);
             }
             return parms;

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Model;
+﻿using Model;
 using SQLDAL;
+using System;
+using System.Collections.Generic;
+using System.Web;
 
 namespace StudentInfo
 {
@@ -25,7 +22,7 @@ namespace StudentInfo
             SQLDAL.DALstudent_info dALstudent_Info = new DALstudent_info();
             IList<student_infoEntity> students = dALstudent_Info.Getstudent_infosbyCondition("studentName='" + username + "' and StudentPassword='" + password + "'");
             IList<admin_userEntity> users = dALadmin_User.Getadmin_usersbyCondition("userName='" + username + "' and userPassword='" + password + "'");
-            if (users.Count > 0&& cookie.Value == CheckCode.Value)
+            if (users.Count > 0 && cookie.Value == CheckCode.Value)
             {
                 Session["uName"] = username;
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index.aspx';</script>");
@@ -43,9 +40,9 @@ namespace StudentInfo
             string password = pass_word.Value;
             SQLDAL.DALstudent_info dALstudent_Info = new DALstudent_info();
             IList<student_infoEntity> students = dALstudent_Info.Getstudent_infosbyCondition("studentName='" + username + "' and StudentPassword='" + password + "'");
-            if (students.Count> 0 && cookie.Value == CheckCode.Value)
+            if (students.Count > 0 && cookie.Value == CheckCode.Value)
             {
-                Session["uName"] =username;
+                Session["uName"] = username;
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index_stu.aspx';</script>");
             }
             else

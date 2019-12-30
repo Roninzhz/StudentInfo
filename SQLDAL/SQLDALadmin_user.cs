@@ -1,11 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using DBUtility;
 using Model;
-using DBUtility;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
 namespace SQLDAL
 {
     #region class SQLDALadmin_user
@@ -244,11 +242,11 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-			new SqlParameter(PARA_UserName,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_UserPassword,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_LoginTimes,SqlDbType.Int) ,
-			new SqlParameter(PARA_TrueName,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_LinkTelephone,SqlDbType.VarChar)			};
+            new SqlParameter(PARA_UserName,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_UserPassword,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_LoginTimes,SqlDbType.Int) ,
+            new SqlParameter(PARA_TrueName,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_LinkTelephone,SqlDbType.VarChar)          };
                 SQLHelper.CacheParameters("SQL_ALL_admin_user_Insert", parms);
             }
             return parms;
@@ -264,12 +262,12 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					new SqlParameter(PARA_UserName,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_UserPassword,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_LoginTimes,SqlDbType.Int) ,
-					new SqlParameter(PARA_TrueName,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_LinkTelephone,SqlDbType.VarChar)					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    new SqlParameter(PARA_UserName,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_UserPassword,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_LoginTimes,SqlDbType.Int) ,
+                    new SqlParameter(PARA_TrueName,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_LinkTelephone,SqlDbType.VarChar)                  };
                 SQLHelper.CacheParameters("SQL_ALL_admin_user_Update", parms);
             }
             return parms;
@@ -285,8 +283,8 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    };
                 SQLHelper.CacheParameters("SQL_PrimaryKey_admin_user", parms);
             }
             return parms;

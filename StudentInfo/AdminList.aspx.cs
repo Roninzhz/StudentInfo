@@ -1,17 +1,15 @@
-﻿using System;
+﻿using Model;
+using SQLDAL;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Model;
-using SQLDAL;
 
 namespace StudentInfo
 {
     public partial class AdminList : System.Web.UI.Page
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)//页面首次加载自动执行

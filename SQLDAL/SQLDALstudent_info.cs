@@ -1,11 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using DBUtility;
 using Model;
-using DBUtility;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
 namespace SQLDAL
 {
     #region class SQLDALstudent_info
@@ -286,17 +284,17 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-			new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentPassword,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentName,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentPhoto,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentSex,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentNation,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentTelehpone,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentQQ,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentClass,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentDormitory,SqlDbType.VarChar) ,
-			new SqlParameter(PARA_StudentAddress,SqlDbType.VarChar)			};
+            new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentPassword,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentName,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentPhoto,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentSex,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentNation,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentTelehpone,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentQQ,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentClass,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentDormitory,SqlDbType.VarChar) ,
+            new SqlParameter(PARA_StudentAddress,SqlDbType.VarChar)         };
                 SQLHelper.CacheParameters("SQL_ALL_student_info_Insert", parms);
             }
             return parms;
@@ -312,18 +310,18 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentPassword,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentName,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentPhoto,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentSex,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentNation,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentTelehpone,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentQQ,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentClass,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentDormitory,SqlDbType.VarChar) ,
-					new SqlParameter(PARA_StudentAddress,SqlDbType.VarChar)					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    new SqlParameter(PARA_StudentId,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentPassword,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentName,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentPhoto,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentSex,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentNation,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentTelehpone,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentQQ,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentClass,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentDormitory,SqlDbType.VarChar) ,
+                    new SqlParameter(PARA_StudentAddress,SqlDbType.VarChar)                 };
                 SQLHelper.CacheParameters("SQL_ALL_student_info_Update", parms);
             }
             return parms;
@@ -339,8 +337,8 @@ namespace SQLDAL
             if (parms == null)
             {
                 parms = new SqlParameter[] {
-					new SqlParameter(PARA_Id,SqlDbType.Int) ,
-					};
+                    new SqlParameter(PARA_Id,SqlDbType.Int) ,
+                    };
                 SQLHelper.CacheParameters("SQL_PrimaryKey_student_info", parms);
             }
             return parms;
