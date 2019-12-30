@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace StudentInfo
 {
     public partial class NewsManage1 : System.Web.UI.Page
@@ -15,19 +16,6 @@ namespace StudentInfo
 
         }
 
-        public void LoadData()
-        {
-            string conditon = string.Empty;
-            //conditon = "(UserName is not null and UserName<>' ')";
-            //if (!string.IsNullOrEmpty(select.Value))
-            //{
-            //    conditon += " and UserName='" + select.Value + "'";
-            //}
-            //DALadmin_user dal = new DALadmin_user();
-            //IList<admin_userEntity> admins = dal.Getadmin_usersbyCondition(conditon);//按照条件来查询数据
-            //grdadmin.DataSource = admins;
-            //grdadmin.DataBind();
-        }
         protected void grdnews_RowCreated(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -51,7 +39,6 @@ namespace StudentInfo
                     break;
                 case "del"://删除用户
                     dal.Delnews(int.Parse(Id));
-                    LoadData();//重新加载数据，验证是否成功删除
                     ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('数据删除成功！');location.href='NewsManage.aspx';</script>");
                     break;
             }

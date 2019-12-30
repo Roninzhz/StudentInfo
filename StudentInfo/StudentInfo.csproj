@@ -206,6 +206,7 @@
     <Content Include="NewsEdit.aspx" />
     <Content Include="NewsManage.aspx" />
     <Content Include="NewsShow.aspx" />
+    <Content Include="NewsWrite.aspx" />
     <Content Include="PasswordMod.aspx" />
     <Content Include="StudentAdd.aspx" />
     <Content Include="StudentFind.aspx" />
@@ -317,6 +318,13 @@
     </Compile>
     <Compile Include="NewsShow.aspx.designer.cs">
       <DependentUpon>NewsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsWrite.aspx.cs">
+      <DependentUpon>NewsWrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsWrite.aspx.designer.cs">
+      <DependentUpon>NewsWrite.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordMod.aspx.cs">
       <DependentUpon>PasswordMod.aspx</DependentUpon>

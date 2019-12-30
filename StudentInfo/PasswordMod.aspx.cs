@@ -41,7 +41,6 @@ namespace StudentInfo
             {
                 student.StudentPassword = L_pass.Value;//修改数据
                 dal.Modstudent_info(student);//提交到数据库
-                Response.Write("修改成功");
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('修改成功！');</script>");
             }
             else

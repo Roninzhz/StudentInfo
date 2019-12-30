@@ -30,7 +30,7 @@
             <div class="layui-col-md12">
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        <button class="layui-btn" onclick="xadmin.open('添加用户','NewsEdit.aspx',700,600)"><i class="layui-icon"></i>添加</button>
+                        <button class="layui-btn" onclick="xadmin.open('新闻编写','NewsWrite.aspx',700,600)"><i class="layui-icon"></i>添加</button>
                     </div>
                     <form class="layui-form layui-col-space5" runat="server">
                         <div class="layui-card-body ">

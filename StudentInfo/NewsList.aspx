@@ -37,6 +37,11 @@
                                     <asp:BoundField DataField="Title" HeaderText="新闻标题" SortExpression="Title" />
                                     <asp:BoundField DataField="Author" HeaderText="作者" SortExpression="Author" />
                                     <asp:BoundField DataField="ReleaseTime" HeaderText="发布时间" SortExpression="ReleaseTime" />
+                                     <asp:TemplateField HeaderText="操作">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lb1" CommandName="see" runat="server">查看</asp:LinkButton>
+                                           </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="Sqlnews" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT [Id], [Title], [Author], [ReleaseTime] FROM [news]"></asp:SqlDataSource>

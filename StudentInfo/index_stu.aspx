@@ -95,7 +95,11 @@
                             <cite>公告</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
-                            <%--二级列表--%>
+                             <li>
+                                <a onclick="xadmin.add_tab('新闻列表','NewsList.aspx')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>新闻列表</cite></a>
+                            </li>
                         </ul>
                     </li>
                     <li>
