@@ -15,16 +15,6 @@ namespace StudentInfo
 
         }
 
-        protected void btnselect_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnout_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void LoadData()
         {
             string conditon = string.Empty;

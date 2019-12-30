@@ -30,18 +30,9 @@
             <div class="layui-col-md12">
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        <button class="layui-btn" onclick="xadmin.open('添加用户','AdminAdd.aspx',700,500)"><i class="layui-icon"></i>添加</button>
+                        <button class="layui-btn" onclick="xadmin.open('添加用户','NewsEdit.aspx',700,600)"><i class="layui-icon"></i>添加</button>
                     </div>
                     <form class="layui-form layui-col-space5" runat="server">
-                        <div class="layui-card-body ">
-                            <div class="layui-inline layui-show-xs-block">
-                                <input type="text" name="username" placeholder="请输入要新闻ID" class="layui-input" id="select" runat="server" />
-                            </div>
-                            <div class="layui-inline layui-show-xs-block">
-                                <asp:Button ID="btnselect" runat="server" CssClass="layui-btn" Text="查找" OnClick="btnselect_Click"></asp:Button>
-                                <asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>
-                            </div>
-                        </div>
                         <div class="layui-card-body ">
                             <asp:GridView ID="grdnews" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" CssClass="layui-table layui-form" PageSize="3" DataSourceID="Sqlnews" OnRowCommand="grdnews_RowCommand" OnRowCreated="grdnews_RowCreated">
                                 <Columns>
@@ -49,7 +40,7 @@
                                     <asp:BoundField DataField="Title" HeaderText="新闻标题" SortExpression="Title" />
                                     <asp:BoundField DataField="Author" HeaderText="作者" SortExpression="Author" />
                                     <asp:BoundField DataField="ReleaseTime" HeaderText="发布时间" SortExpression="ReleaseTime" />
-                                     <asp:TemplateField HeaderText="操作">
+                                    <asp:TemplateField HeaderText="操作">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lb1" CommandName="edit" runat="server">编辑</asp:LinkButton>||
                                             <asp:LinkButton ID="lb2" CommandName="del" runat="server" OnClientClick="javascript:return confirm('确定删除吗?');">删除</asp:LinkButton>
