@@ -141,14 +141,14 @@
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('新闻列表','city.html')">
+                                <a onclick="xadmin.add_tab('新闻列表','NewsList.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>新闻列表</cite></a>
                             </li>
                         </ul>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('新闻编写','NewsList.aspx')">
+                                <a onclick="xadmin.add_tab('新闻编写','NewsManage.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>新闻编写</cite></a>
                             </li>
