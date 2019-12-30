@@ -11,52 +11,34 @@ namespace StudentInfo
 {
 
 
-    public partial class NewsManage1
+    public partial class NewsManage
     {
 
         /// <summary>
-        /// select 控件。
+        /// desc1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText select;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea desc1;
 
         /// <summary>
-        /// btnselect 控件。
+        /// desc 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnselect;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea desc;
 
         /// <summary>
-        /// btnout 控件。
+        /// submit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnout;
-
-        /// <summary>
-        /// grdnews 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdnews;
-
-        /// <summary>
-        /// Sqlnews 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Sqlnews;
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }

@@ -203,6 +203,7 @@
     <Content Include="lib\layui\lay\modules\util.js" />
     <Content Include="Login.aspx" />
     <Content Include="NewsList.aspx" />
+    <Content Include="NewsEdit.aspx" />
     <Content Include="NewsManage.aspx" />
     <Content Include="NewsShow.aspx" />
     <Content Include="PasswordMod.aspx" />
@@ -295,6 +296,13 @@
     </Compile>
     <Compile Include="NewsList.aspx.designer.cs">
       <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsEdit.aspx.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsEdit.aspx.designer.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewsManage.aspx.cs">
       <DependentUpon>NewsManage.aspx</DependentUpon>

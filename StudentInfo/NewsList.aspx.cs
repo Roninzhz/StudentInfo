@@ -8,5 +8,15 @@ namespace StudentInfo
         {
 
         }
+
+        protected void grdnews_RowCreated(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void grdnews_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
+        {
+
+        }
     }
 }
