@@ -45,7 +45,7 @@
                         <div class="layui-card-body ">
                             <asp:GridView ID="grdusers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
                                 CssClass="layui-table layui-form" PageSize="3" OnRowCommand="grdusers_RowCommand"
-                                OnRowCreated="grdusers_RowCreated">
+                                OnRowCreated="grdusers_RowCreated" style="margin-top: 8px">
                                 <Columns>
                                     <asp:BoundField DataField="StudentId" HeaderText="学号" SortExpression="StudentId" />
                                     <asp:BoundField DataField="StudentPassword" HeaderText="学生密码" SortExpression="StudentPassword" />

@@ -35,24 +35,23 @@ namespace StudentInfo
         {
             int rowindex = int.Parse(e.CommandArgument.ToString());//获取操作行的行号
             string Id = grdusers.DataKeys[rowindex].Value.ToString();//获取操作行数据的主键Id
-            DALadmin_user dal = new DALadmin_user();//定义针对admin_user表的操作对象
-
+            DALstudent_info dal = new DALstudent_info();
             switch (e.CommandName)//获取操作对象的命令
             {
                 case "edit"://调转到编辑页面
                     Response.Redirect("AdminEdit.aspx?id=" + Id);
                     break;
                 case "del"://删除用户
-                    dal.Deladmin_user(int.Parse(Id));
+                    dal.Delstudent_info(int.Parse(Id));
                     LoadData();//重新加载数据，验证是否成功删除
-                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('数据删除成功！');location.href='AdminList.aspx';</script>");
+                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('数据删除成功！');location.href='StudentFind.aspx';</script>");
                     break;
                 case "reset"://修改密码
-                    admin_userEntity admin = dal.Getadmin_user(int.Parse(Id));
-                    admin.UserPassword = "123456";
-                    dal.Modadmin_user(admin);
+                    student_infoEntity user = dal.Getstudent_info(int.Parse(Id));
+                    user.StudentPassword = "123456";
+                    dal.Modstudent_info(user);
                     LoadData();//重新加载数据，验证是否重置
-                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('用户密码重置成功，新密码123456');location.href='AdminList.aspx';</script>");
+                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('用户密码重置成功，新密码123456');location.href='StudentFind.aspx';</script>");
                     break;
             }
         }
