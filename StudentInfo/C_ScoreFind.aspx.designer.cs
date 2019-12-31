@@ -11,52 +11,61 @@ namespace StudentInfo
 {
 
 
-    public partial class CourseScore
+    public partial class CourseFind
     {
 
         /// <summary>
-        /// form1 控件。
+        /// ddlsource 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlsource;
 
         /// <summary>
-        /// ddlCourse 控件。
+        /// Sqlcourse 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCourse;
+        protected global::System.Web.UI.WebControls.SqlDataSource Sqlcourse;
 
         /// <summary>
-        /// grdCourse 控件。
+        /// btnselect 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdCourse;
+        protected global::System.Web.UI.WebControls.Button btnselect;
 
         /// <summary>
-        /// SqlCourse 控件。
+        /// grdcourse 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlCourse;
+        protected global::System.Web.UI.WebControls.GridView grdcourse;
 
         /// <summary>
-        /// btnOK 控件。
+        /// Sqlcourseinfo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOK;
+        protected global::System.Web.UI.WebControls.SqlDataSource Sqlcourseinfo;
+
+        /// <summary>
+        /// GridView1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

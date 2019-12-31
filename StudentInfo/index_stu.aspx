@@ -113,13 +113,13 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>个人信息</cite></a>
                             </li>
-                            <li>
+                            <%--<li>
                                 <a onclick="xadmin.add_tab('课程安排','#')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>课程安排</cite></a>
-                            </li>
+                            </li>--%>
                             <li>
-                                <a onclick="xadmin.add_tab('成绩信息','#')">
+                                <a onclick="xadmin.add_tab('成绩信息','C_ScoreFind.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>成绩信息</cite></a>
                             </li>
@@ -132,7 +132,7 @@
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('挑选课程','cate.html')">
+                                <a onclick="xadmin.add_tab('挑选课程','CourseSelect.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>挑选课程</cite></a>
                             </li>

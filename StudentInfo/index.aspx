@@ -109,6 +109,11 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生信息查看</cite></a>
                             </li>
+                             <li>
+                                <a onclick="xadmin.add_tab('学生成绩录入','CourseScore.aspx')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>学生成绩录入</cite></a>
+                            </li>
                         </ul>
                     </li>
                     <li>

@@ -64,7 +64,7 @@
     <Content Include="AdminList.aspx" />
     <Content Include="CheckCode.aspx" />
     <Content Include="CourseAdd.aspx" />
-    <Content Include="CourseFind.aspx" />
+    <Content Include="C_ScoreFind.aspx" />
     <Content Include="CourseScore.aspx" />
     <Content Include="CourseSelect.aspx" />
     <Content Include="fonts\iconfont.eot" />
@@ -249,12 +249,12 @@
     <Compile Include="CourseAdd.aspx.designer.cs">
       <DependentUpon>CourseAdd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CourseFind.aspx.cs">
-      <DependentUpon>CourseFind.aspx</DependentUpon>
+    <Compile Include="C_ScoreFind.aspx.cs">
+      <DependentUpon>C_ScoreFind.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CourseFind.aspx.designer.cs">
-      <DependentUpon>CourseFind.aspx</DependentUpon>
+    <Compile Include="C_ScoreFind.aspx.designer.cs">
+      <DependentUpon>C_ScoreFind.aspx</DependentUpon>
     </Compile>
     <Compile Include="CourseScore.aspx.cs">
       <DependentUpon>CourseScore.aspx</DependentUpon>
