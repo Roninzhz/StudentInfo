@@ -196,6 +196,13 @@
                         <dd data-type="all">关闭全部</dd>
                     </dl>
                 </div>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <%--<iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>--%>
+                    </div>
+                </div>
+                <div id="tab_show"></div>
+            </div>
         </div>
         <div class="page-content-bg"></div>
         <style id="theme_style"></style>
