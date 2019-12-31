@@ -61,8 +61,7 @@
                     <div class="layui-form-item">
                         <label for="L_repass" class="layui-form-label">
                         </label>
-                    <asp:Button ID="btnedit" runat="server" CssClass="layui-btn" Text="修改" OnClick="btnedit_Click"></asp:Button>
-                                
+                    <asp:Button ID="btnedit" runat="server" CssClass="layui-btn" Text="修改" OnClick="btnedit_Click"></asp:Button>          
                     </div>
             </form>
         </div>
