@@ -42,6 +42,7 @@
                                 <asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>
                             </div>
                         </div>
+                        <h1>1</h1>
                         <div class="layui-card-body ">
                             <asp:GridView ID="grdadmin" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" CssClass="layui-table layui-form" PageSize="3" OnRowCommand="grdadmin_RowCommand" OnRowCreated="grdadmin_RowCreated">
                                 <Columns>
