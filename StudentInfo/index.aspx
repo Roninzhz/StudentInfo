@@ -30,7 +30,7 @@
             <div class="left_open">
                 <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
             </div>
-            <ul class="layui-nav left fast-add">
+            <%-- <ul class="layui-nav left fast-add">
                 <li class="layui-nav-item">
                     <a href="javascript:;">+新增</a>
                     <dl class="layui-nav-child">
@@ -57,7 +57,7 @@
                         </dd>
                     </dl>
                 </li>
-            </ul>
+            </ul>--%>
             <ul class="layui-nav right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
@@ -65,8 +65,8 @@
                     <dl class="layui-nav-child">
                         <!-- 二级菜单 -->
                         <dd>
-                            <a onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a></dd>
-                        <%--<dd>
+                            <%-- <a onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a></dd>--%>
+                            <%--<dd>
                             <a onclick="xadmin.open('切换帐号','Login.aspx')">切换帐号</a></dd>
                         <dd>
                             <a onclick="xadmin.add_tab('切换帐号','Login.aspx')">切换帐号</a></dd>--%>
@@ -74,8 +74,8 @@
                             <a href="Login.aspx">退出</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item to-index">
-                    <a href="/">前台首页</a></li>
+                <%-- <li class="layui-nav-item to-index">
+                    <a href="/">前台首页</a></li>--%>
             </ul>
         </div>
         <!-- 顶部结束 -->
@@ -89,6 +89,13 @@
                             <i class="iconfont left-nav-li">&#xe6b8;</i>
                             <cite>公告</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('新闻列表','NewsList.aspx')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>新闻列表</cite></a>
+                            </li>
+                        </ul>
                         <ul class="sub-menu">
                             <%--二级列表--%>
                         </ul>
@@ -109,12 +116,12 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生信息查看</cite></a>
                             </li>
-                             <li>
+                            <li>
                                 <a onclick="xadmin.add_tab('学生成绩录入','CourseScore.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生成绩录入</cite></a>
                             </li>
-                             <li>
+                            <li>
                                 <a onclick="xadmin.add_tab('学生成绩列表','ScoreList.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生成绩列表</cite></a>

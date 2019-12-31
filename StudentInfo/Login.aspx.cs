@@ -25,7 +25,7 @@ namespace StudentInfo
             if (users.Count > 0 && cookie.Value == CheckCode.Value)
             {
                 Session["uName"] = username;
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index.aspx';</script>");
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>location.href='index.aspx';</script>");
             }
             else
             {
@@ -43,7 +43,7 @@ namespace StudentInfo
             if (students.Count > 0 && cookie.Value == CheckCode.Value)
             {
                 Session["uName"] = username;
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('登录成功');location.href='index_stu.aspx';</script>");
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>location.href='index_stu.aspx';</script>");
             }
             else
             {
