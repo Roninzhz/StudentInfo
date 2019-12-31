@@ -113,11 +113,6 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>个人信息</cite></a>
                             </li>
-                            <%--<li>
-                                <a onclick="xadmin.add_tab('课程安排','#')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>课程安排</cite></a>
-                            </li>--%>
                             <li>
                                 <a onclick="xadmin.add_tab('成绩信息','C_ScoreFind.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
@@ -137,7 +132,7 @@
                                     <cite>挑选课程</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('查看课程','cate.html')">
+                                <a onclick="xadmin.add_tab('查看课程','CourseList.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>查看课程</cite></a>
                             </li>
@@ -150,7 +145,7 @@
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('教学评价','city.html')">
+                                <a onclick="xadmin.add_tab('教学评价','welcome.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>教学评价</cite></a>
                             </li>

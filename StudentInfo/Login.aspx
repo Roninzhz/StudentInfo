@@ -40,6 +40,7 @@
         </form>
     </div>
     <!-- 底部结束 -->
+    <%--验证码--%>
     <script type="text/javascript">
         $("#Image").click(function () {
             $(this).attr("src", "CheckCode.aspx?code=" + (new Date()).getTime());

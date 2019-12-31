@@ -114,6 +114,11 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学生成绩录入</cite></a>
                             </li>
+                             <li>
+                                <a onclick="xadmin.add_tab('学生成绩列表','ScoreList.aspx')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>学生成绩列表</cite></a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -128,7 +133,7 @@
                                     <cite>添加课程</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('课程信息查看','cate.html')">
+                                <a onclick="xadmin.add_tab('课程信息查看','CourseList.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>课程信息查看</cite></a>
                             </li>
@@ -191,13 +196,6 @@
                         <dd data-type="all">关闭全部</dd>
                     </dl>
                 </div>
-                <div class="layui-tab-content">
-                    <div class="layui-tab-item layui-show">
-                        <%--<iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>--%>
-                    </div>
-                </div>
-                <div id="tab_show"></div>
-            </div>
         </div>
         <div class="page-content-bg"></div>
         <style id="theme_style"></style>
