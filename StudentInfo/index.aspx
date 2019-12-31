@@ -182,6 +182,11 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>管理员添加</cite></a>
                             </li>
+                             <li>
+                                <a onclick="xadmin.add_tab('修改密码','UserEditPwd.aspx')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>修改密码</cite></a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

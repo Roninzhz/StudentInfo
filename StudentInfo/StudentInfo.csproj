@@ -355,6 +355,7 @@
     <Content Include="ueditor\ueditor.config.js" />
     <Content Include="ueditor\ueditor.parse.js" />
     <Content Include="ueditor\ueditor.parse.min.js" />
+    <Content Include="UserEditPwd.aspx" />
     <Content Include="Welcome.aspx" />
     <Content Include="ueditor\net\config.json" />
     <Content Include="ueditor\net\controller.ashx" />
@@ -677,6 +678,13 @@
     <Compile Include="ueditor\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="ueditor\net\App_Code\PathFormater.cs" />
     <Compile Include="ueditor\net\App_Code\UploadHandler.cs" />
+    <Compile Include="UserEditPwd.aspx.cs">
+      <DependentUpon>UserEditPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEditPwd.aspx.designer.cs">
+      <DependentUpon>UserEditPwd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
