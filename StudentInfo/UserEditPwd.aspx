@@ -18,7 +18,7 @@
     <div class="layui-fluid">
         <div class="layui-row">
             <form class="layui-form" runat="server">
-                  <div class="layui-form-item">
+                <div class="layui-form-item">
                     <label for="username" class="layui-form-label">
                         <span class="x-red">*</span>学生学号
                     </label>
@@ -38,31 +38,31 @@
                         <input type="password" id="Password1" name="pass" lay-verify="pass"
                             autocomplete="off" class="layui-input" runat="server" />
                     </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">
+                        <span class="x-red">*</span>新密码
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="L_pass" name="pass" lay-verify="pass"
+                            autocomplete="off" class="layui-input" runat="server" />
                     </div>
-                    <div class="layui-form-item">
-                        <label for="L_pass" class="layui-form-label">
-                            <span class="x-red">*</span>新密码
-                        </label>
-                        <div class="layui-input-inline">
-                            <input type="password" id="L_pass" name="pass" lay-verify="pass"
-                                autocomplete="off" class="layui-input" runat="server" />
-                        </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                        <span class="x-red">*</span>确认密码
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="L_repass" name="repass" lay-verify="repass"
+                            autocomplete="off" class="layui-input" runat="server" />
                     </div>
-                    <div class="layui-form-item">
-                        <label for="L_repass" class="layui-form-label">
-                            <span class="x-red">*</span>确认密码
-                        </label>
-                        <div class="layui-input-inline">
-                            <input type="password" id="L_repass" name="repass" lay-verify="repass"
-                                autocomplete="off" class="layui-input" runat="server" />
-                        </div>
-                        <asp:CompareValidator ID="Comparepass" runat="server" ErrorMessage="*两次密码输入不一致" ControlToValidate="L_pass" ControlToCompare="L_repass" ForeColor="#FF3300"></asp:CompareValidator>
-                    </div>
-                    <div class="layui-form-item">
-                        <label for="L_repass" class="layui-form-label">
-                        </label>
-                    <asp:Button ID="btnedit" runat="server" CssClass="layui-btn" Text="修改" OnClick="btnedit_Click"></asp:Button>          
-                    </div>
+                    <asp:CompareValidator ID="Comparepass" runat="server" ErrorMessage="*两次密码输入不一致" ControlToValidate="L_pass" ControlToCompare="L_repass" ForeColor="#FF3300"></asp:CompareValidator>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_repass" class="layui-form-label">
+                    </label>
+                    <asp:Button ID="btnedit" runat="server" CssClass="layui-btn" Text="修改" OnClick="btnedit_Click"></asp:Button>
+                </div>
             </form>
         </div>
     </div>
