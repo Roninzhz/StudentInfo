@@ -21,7 +21,7 @@ namespace StudentInfo
             DALnew dal = new DALnew();
             newEntity news = new newEntity();
             news.Title = desc1.Value;
-            news.Content = desc.Value;
+            news.Content = content.Value;
             news.Author = Session["uName"].ToString();
             news.ReleaseTime = System.DateTime.Now;
             dal.Addnews(news);

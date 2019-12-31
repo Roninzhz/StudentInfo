@@ -28,7 +28,8 @@ namespace StudentInfo
             newEntity news= dal.Getnews(id);
             ViewState["news"] = news;
             desc1.Value = news.Id.ToString();
-            desc.Value = news.Content;
+            //desc.Value = news.Content;
+            content.Value = news.Content;
         }
 
         protected void submit_Click(object sender, EventArgs e)
@@ -36,7 +37,8 @@ namespace StudentInfo
             DALnew dal = new DALnew();
             newEntity news = (newEntity)ViewState["news"];
             news.Title = desc1.Value;
-            news.Content = desc.Value;
+            //news.Content = desc.Value;
+            news.Content = content.Value;
             dal.Modnews(news);
             ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('编辑成功！');</script>");
         }

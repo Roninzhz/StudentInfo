@@ -2,6 +2,7 @@
 using SQLDAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -32,6 +33,7 @@ namespace StudentInfo
             }
             DALadmin_user dal = new DALadmin_user();
             IList<admin_userEntity> admins = dal.Getadmin_usersbyCondition(conditon);//按照条件来查询数据
+            ViewState["data"] = admins;//在当前页缓存加载的数据，减少后续访问时读写外存的次数。
             grdadmin.DataSource = admins;
             grdadmin.DataBind();
         }
@@ -80,27 +82,50 @@ namespace StudentInfo
 
         protected void btnout_Click(object sender, EventArgs e)
         {
-            this.grdadmin.Columns[4].Visible = false;
-            Response.Clear();
-            Response.AddHeader("content-disposition",
-            "attachment;filename=管理员列表.xls");
-            Response.Charset = "gb2312";
-            Response.ContentEncoding = System.Text.Encoding.Default;
-            Response.ContentType = "application/vnd.xls";
-            System.IO.StringWriter stringWrite = new System.IO.StringWriter();
-            System.Web.UI.HtmlTextWriter htmlWrite =
-            new HtmlTextWriter(stringWrite);
-            grdadmin.AllowPaging = false;
-            LoadData();
-            grdadmin.RenderControl(htmlWrite);
-            Response.Write(stringWrite.ToString());
-            Response.End();
-            grdadmin.AllowPaging = true;
-            LoadData();
+            //this.grdadmin.Columns[4].Visible = false;
+            //Response.Clear();
+            //Response.AddHeader("content-disposition",
+            //"attachment;filename=管理员列表.xls");
+            //Response.Charset = "gb2312";
+            //Response.ContentEncoding = System.Text.Encoding.Default;
+            //Response.ContentType = "application/vnd.xls";
+            //System.IO.StringWriter stringWrite = new System.IO.StringWriter();
+            //System.Web.UI.HtmlTextWriter htmlWrite =
+            //new HtmlTextWriter(stringWrite);
+            //grdadmin.AllowPaging = false;
+            //LoadData();
+            //grdadmin.RenderControl(htmlWrite);
+            //Response.Write(stringWrite.ToString());
+            //Response.End();
+            //grdadmin.AllowPaging = true;
+            //LoadData();
+            IList<admin_userEntity> admins = (IList<admin_userEntity>)ViewState["data"];
+            DataTable dt = new DataTable();//定义datatable
+            //为datatable添加列
+            dt.Columns.Add("zh");
+            dt.Columns.Add("xm");
+            dt.Columns.Add("mm");
+            dt.Columns.Add("cs");
+            dt.Columns.Add("dh");
+            dt.AcceptChanges();//接收添加，确认
+            foreach (admin_userEntity admin in admins)
+            {
+                DataRow dr = dt.NewRow();//根据datatable模板创建一行
+                dr[0] = admin.UserName;
+                dr[1] = admin.TrueName;
+                dr[2] = admin.UserPassword;
+                dr[3] = admin.LoginTimes;
+                dr[4] = admin.LinkTelephone;
+                dt.Rows.Add(dr);//为datatable添加行
+            }
+            dt.AcceptChanges();
+            string[] titles = { "账号", "姓名","密码", "登录次数", "联系电话" };
+            string title = "系统用户导出列表";
+            CommonClass.ExportToExcel_NoFormat(dt, titles, title);
         }
-        public override void VerifyRenderingInServerForm(Control control)
-        {
-            // Confirms that an HtmlForm control is rendered for
-        }
+        //public override void VerifyRenderingInServerForm(Control control)
+        //{
+        //    // Confirms that an HtmlForm control is rendered for
+        //}
     }
 }

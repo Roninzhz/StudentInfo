@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./css/xadmin.css" />
     <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
+     <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.js"></script>
+    <link rel="stylesheet" type="text/css" href="ueditor/themes/default/ueditor.css" />
 </head>
 <body>
     <div class="x-nav">
@@ -45,12 +48,53 @@
                         </tbody>
                     </table>
                 </div>
+                 <div class="am-form-group">
+                            <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                            <div class="am-u-sm-9">
+                                <input type="text" runat="server" class="tpl-form-input" id="title" placeholder="请输入标题文字">
+                                <small>请填写标题文字10-20字左右。</small>
+                            </div>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
+                            <div class="am-u-sm-9">
+                                <input type="text" id="rtime" runat="server" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly="">
+                                <small>发布时间为必填</small>
+                            </div>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="user-weibo" class="am-u-sm-3 am-form-label">上传附件 <span class="tpl-form-line-small-title">Images</span></label>
+                            <div class="am-u-sm-9">
+                                <div>
+                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                </div>
+
+                            </div>
+                        </div>
                 <div class="layui-form-item layui-form-text">
                     <label for="desc" class="layui-form-label">
                         新闻内容
                     </label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea" runat="server"></textarea>
+                        <%--<textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea" runat="server"></textarea>--%>
+                         <asp:HiddenField ID="content" runat="server" />
+                                <div id="txteditor" style="height: 500px;"></div>
+                                <script type="text/javascript">
+                                    var temp = document.getElementById("<%=content.ClientID %>").value;
+                                    var ue = new baidu.editor.ui.Editor();
+                                    ue.render("txteditor");   //这里填写要改变为编辑器的控件id 
+                                    ue.ready(function () { ue.setContent(temp); })
+                                </script>
+
+                                <script type="text/javascript">
+                                    function getContent() {
+                                        var temp = UE.getEditor('txteditor').getContent();
+                                        //alert(temp); 
+                                        document.getElementById("<%=content.ClientID %>").value = temp;
+                    }
+                                </script>
                     </div>
                 </div>
                 <div class="layui-form-item">
