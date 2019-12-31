@@ -39,7 +39,7 @@
                     </table>
                 </div>
                  <div class="am-form-group">
-                            <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                           <%-- <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                             <div class="am-u-sm-9">
                                 <input type="text" runat="server" class="tpl-form-input" id="title" placeholder="请输入标题文字">
                                 <small>请填写标题文字10-20字左右。</small>
@@ -52,7 +52,7 @@
                                 <input type="text" id="rtime" runat="server" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly="">
                                 <small>发布时间为必填</small>
                             </div>
-                        </div>
+                        </div>--%>
 
                         <div class="am-form-group">
                             <label for="user-weibo" class="am-u-sm-3 am-form-label">上传附件 <span class="tpl-form-line-small-title">Images</span></label>

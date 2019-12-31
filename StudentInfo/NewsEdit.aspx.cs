@@ -34,13 +34,20 @@ namespace StudentInfo
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            DALnew dal = new DALnew();
-            newEntity news = (newEntity)ViewState["news"];
-            news.Title = desc1.Value;
-            //news.Content = desc.Value;
-            news.Content = content.Value;
-            dal.Modnews(news);
-            ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('编辑成功！');</script>");
+            if (desc1.Value != null && content.Value != null)
+            {
+                DALnew dal = new DALnew();
+                newEntity news = (newEntity)ViewState["news"];
+                news.Title = desc1.Value;
+                //news.Content = desc.Value;
+                news.Content = content.Value;
+                dal.Modnews(news);
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('编辑成功！');</script>");
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('编辑失败！');</script>");
+            }
         }
     }
 }

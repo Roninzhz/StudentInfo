@@ -18,14 +18,21 @@ namespace StudentInfo
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            DALnew dal = new DALnew();
-            newEntity news = new newEntity();
-            news.Title = desc1.Value;
-            news.Content = content.Value;
-            news.Author = Session["uName"].ToString();
-            news.ReleaseTime = System.DateTime.Now;
-            dal.Addnews(news);
-            ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻编辑成功');</script>");
+            if (Session["uName"]!=null&&desc1.Value!=""&&content.Value!="")
+            {
+                DALnew dal = new DALnew();
+                newEntity news = new newEntity();
+                news.Title = desc1.Value;
+                news.Content = content.Value;
+                news.Author = Session["uName"].ToString();
+                news.ReleaseTime = System.DateTime.Now;
+                dal.Addnews(news);
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻编辑成功!');</script>");
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻编辑失败！');</script>");
+            }
         }
     }
 }
