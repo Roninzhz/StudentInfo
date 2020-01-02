@@ -140,7 +140,7 @@
                                     <cite>添加课程</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('课程信息查看','CourseList.aspx')">
+                                <a onclick="xadmin.add_tab('课程信息查看','CourseList_tea.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>课程信息查看</cite></a>
                             </li>

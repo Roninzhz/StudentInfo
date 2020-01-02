@@ -69,7 +69,8 @@
     <Content Include="AdminList.aspx" />
     <Content Include="CheckCode.aspx" />
     <Content Include="CourseAdd.aspx" />
-    <Content Include="CourseList.aspx" />
+    <Content Include="CourseList_stu.aspx" />
+    <Content Include="CourseList_tea.aspx" />
     <Content Include="C_ScoreFind.aspx" />
     <Content Include="CourseScore.aspx" />
     <Content Include="CourseSelect.aspx" />
@@ -544,12 +545,19 @@
     <Compile Include="CourseAdd.aspx.designer.cs">
       <DependentUpon>CourseAdd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CourseList.aspx.cs">
-      <DependentUpon>CourseList.aspx</DependentUpon>
+    <Compile Include="CourseList_stu.aspx.cs">
+      <DependentUpon>CourseList_stu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CourseList.aspx.designer.cs">
-      <DependentUpon>CourseList.aspx</DependentUpon>
+    <Compile Include="CourseList_stu.aspx.designer.cs">
+      <DependentUpon>CourseList_stu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseList_tea.aspx.cs">
+      <DependentUpon>CourseList_tea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseList_tea.aspx.designer.cs">
+      <DependentUpon>CourseList_tea.aspx</DependentUpon>
     </Compile>
     <Compile Include="C_ScoreFind.aspx.cs">
       <DependentUpon>C_ScoreFind.aspx</DependentUpon>

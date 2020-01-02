@@ -124,7 +124,7 @@
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li">&#xe723;</i>
                             <cite>我的课程</cite>
-                            <i class="iconfont nav_right">&#xe697;</i></a>
+                            <i class="iconfont nav_right">&#xe697;</i></a> 
                         <ul class="sub-menu">
                             <li>
                                 <a onclick="xadmin.add_tab('挑选课程','CourseSelect.aspx')">
@@ -132,7 +132,7 @@
                                     <cite>挑选课程</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('查看课程','CourseList.aspx')">
+                                <a onclick="xadmin.add_tab('查看课程','CourseList_stu.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>查看课程</cite></a>
                             </li>

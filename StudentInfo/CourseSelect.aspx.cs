@@ -76,10 +76,10 @@ namespace StudentInfo
         protected void Button1_Click(object sender, EventArgs e)
         {
             ListItem li = lb1.SelectedItem;
-            if (li.Selected==false)
-            {
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('无可操作项！');</script>");
-            }
+            //if (li.Selected==false)
+            //{
+            //    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('无可操作项！');</script>");
+            //}
             li.Selected = false;
             lb2.Items.Add(li);
             lb1.Items.Remove(li);
