@@ -15,7 +15,7 @@ namespace StudentInfo
             DALstudent_course dal = new DALstudent_course();
             student_courseEntity course = new student_courseEntity();
             course.CourseId = lbx1.SelectedValue;
-            course.StudentId = Session["uName"].ToString();
+            course.StudentId = Convert.ToInt32(Session["uName"]);
             dal.Addstudent_course(course);
             Response.Write("<script>alert('添加成功');location.href='CourseSelect.aspx';</script>");
         }

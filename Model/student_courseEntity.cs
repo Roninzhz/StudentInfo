@@ -12,7 +12,7 @@ namespace Model
     {
         #region Member Variables
         protected int _id;
-        protected string _studentId = String.Empty;
+        protected int _studentId;
         protected string _courseId = String.Empty;
         protected decimal _courseScore;
         #endregion
@@ -31,7 +31,7 @@ namespace Model
         /// <param name="courseScore"></param>
         public student_courseEntity(
         int id,
-        string studentId,
+        int studentId,
         string courseId,
         decimal courseScore)
         {
@@ -48,7 +48,7 @@ namespace Model
             set { _id = value; }
         }
 
-        public string StudentId
+        public int StudentId
         {
             get { return _studentId; }
             set { _studentId = value; }

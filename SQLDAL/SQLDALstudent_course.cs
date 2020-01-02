@@ -119,7 +119,7 @@ namespace SQLDAL
                 if (reader.Read())
                 {
                     if (!reader.IsDBNull(0)) student_course.Id = reader.GetInt32(0);
-                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetString(1);
+                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetInt32(0);
                     if (!reader.IsDBNull(2)) student_course.CourseId = reader.GetString(2);
                     if (!reader.IsDBNull(3)) student_course.CourseScore = reader.GetDecimal(3);
                 }
@@ -146,7 +146,7 @@ namespace SQLDAL
                 {
                     student_courseEntity student_course = new student_courseEntity();
                     if (!reader.IsDBNull(0)) student_course.Id = reader.GetInt32(0);
-                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetString(1);
+                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetInt32(0);
                     if (!reader.IsDBNull(2)) student_course.CourseId = reader.GetString(2);
                     if (!reader.IsDBNull(3)) student_course.CourseScore = reader.GetDecimal(3);
                     student_courses.Add(student_course);
@@ -169,7 +169,7 @@ namespace SQLDAL
                 {
                     student_courseEntity student_course = new student_courseEntity();
                     if (!reader.IsDBNull(0)) student_course.Id = reader.GetInt32(0);
-                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetString(1);
+                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetInt32(0);
                     if (!reader.IsDBNull(2)) student_course.CourseId = reader.GetString(2);
                     if (!reader.IsDBNull(3)) student_course.CourseScore = reader.GetDecimal(3);
                     student_courses.Add(student_course);
@@ -206,7 +206,7 @@ namespace SQLDAL
                 {
                     student_courseEntity student_course = new student_courseEntity();
                     if (!reader.IsDBNull(0)) student_course.Id = reader.GetInt32(0);
-                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetString(1);
+                    if (!reader.IsDBNull(1)) student_course.StudentId = reader.GetInt32(0);
                     if (!reader.IsDBNull(2)) student_course.CourseId = reader.GetString(2);
                     if (!reader.IsDBNull(3)) student_course.CourseScore = reader.GetDecimal(3);
                     student_courses.Add(student_course);

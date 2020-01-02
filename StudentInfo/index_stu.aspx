@@ -141,13 +141,13 @@
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li">&#xe723;</i>
-                            <cite>教学评价</cite>
+                            <cite>学习质量</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('教学评价','welcome.aspx')">
+                                <a onclick="xadmin.add_tab('学习质量','welcome.aspx')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>教学评价</cite></a>
+                                    <cite>学习质量</cite></a>
                             </li>
                         </ul>
                     </li>

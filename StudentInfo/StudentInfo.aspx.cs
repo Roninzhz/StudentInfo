@@ -11,6 +11,7 @@ namespace StudentInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             LoadData();
         }
         public void LoadData()
@@ -19,7 +20,7 @@ namespace StudentInfo
             conditon = "(StudentId is not null and StudentId<>' ')";
             if (!string.IsNullOrEmpty(Session["uName"].ToString()))
             {
-                conditon += " and StudentName='" + Session["uName"].ToString() + "'";
+                conditon += " and Id='" + Session["uName"].ToString() + "'";
             }
             DALstudent_info dal = new DALstudent_info();
             IList<student_infoEntity> admins = dal.Getstudent_infosbyCondition(conditon);//按照条件来查询数据

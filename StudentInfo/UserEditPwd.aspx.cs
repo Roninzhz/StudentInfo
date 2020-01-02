@@ -15,33 +15,43 @@ namespace StudentInfo
         {
             if (!IsPostBack)
             {
-                LoadData();
+                int id = int.Parse(Session["uName"].ToString());
+                GetData(id);//获取数据
             }
         }
-        public void LoadData()
+        public void GetData(int id)
         {
-            string bian = Session["uName"].ToString();
-            string conditon = string.Empty;
-            if (!string.IsNullOrEmpty(bian))
-            {
-                conditon += "UserName='" + bian + "'";
-            }
             DALadmin_user dal = new DALadmin_user();
-
-            IList<admin_userEntity> ad = dal.Getadmin_usersbyCondition(conditon);
-            if (ad.Count != 0)
-            {             //判断是否为空
-                for (int i = 0; i < ad.Count(); i++)
-                {              //for循环将数据逐一获取到
-                    admin_userEntity defCodeInfoResDto = ad[i];
-                }
-                int j = ad[0].Id;
-                admin_userEntity admin = dal.Getadmin_user(j);
-                ViewState["admin"] = admin;//在当前页缓存数据。
-                UserId.Value = admin.UserName;//加载显示数据
-                //Password1.Value = admin.UserPassword;
-            }
+            admin_userEntity users = dal.Getadmin_user(id);
+            ViewState["user"] = users;
+            UserId.Value = users.UserName;
+            //将取回的数据在页面进行展示，可以修改的数据使用TextBox来展示，并提供修改。
+            //通过按钮触发，实现将数据编辑保存的功能
         }
+        //public void LoadData()
+        //{
+        //    string bian = Session["uName"].ToString();
+        //    string conditon = string.Empty;
+        //    if (!string.IsNullOrEmpty(bian))
+        //    {
+        //        conditon += "UserName='" + bian + "'";
+        //    }
+        //    DALadmin_user dal = new DALadmin_user();
+
+        //    IList<admin_userEntity> ad = dal.Getadmin_usersbyCondition(conditon);
+        //    if (ad.Count != 0)
+        //    {             //判断是否为空
+        //        for (int i = 0; i < ad.Count(); i++)
+        //        {              //for循环将数据逐一获取到
+        //            admin_userEntity defCodeInfoResDto = ad[i];
+        //        }
+        //        int j = ad[1].Id;
+        //        admin_userEntity admin = dal.Getadmin_user(j);
+        //        ViewState["admin"] = admin;//在当前页缓存数据。
+        //        UserId.Value = admin.UserName;//加载显示数据
+        //        //Password1.Value = admin.UserPassword;
+        //    }
+        //}
         protected void btnedit_Click(object sender, EventArgs e)
         {
             DALadmin_user dal = new DALadmin_user();

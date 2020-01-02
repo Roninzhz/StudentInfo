@@ -10,11 +10,8 @@ namespace StudentInfo
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["id"] != null)
-                {
-                    int id = int.Parse(Request.QueryString["id"].ToString());
+                    int id = int.Parse(Session["uName"].ToString());
                     GetData(id);//获取数据
-                }
             }
         }
 
