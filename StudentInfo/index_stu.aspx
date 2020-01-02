@@ -30,7 +30,7 @@
         <!-- 顶部开始 -->
         <div class="container">
             <div class="logo">
-                <a href="./index.html">学生信息教务管理</a>
+                <a href="#">学生信息教务管理</a>
             </div>
             <div class="left_open">
                 <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
@@ -94,13 +94,6 @@
                             <i class="iconfont left-nav-li">&#xe6b8;</i>
                             <cite>公告</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
-                        <ul class="sub-menu">
-                             <li>
-                                <a onclick="xadmin.add_tab('新闻列表','NewsList.aspx')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>新闻列表</cite></a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="javascript:;">
