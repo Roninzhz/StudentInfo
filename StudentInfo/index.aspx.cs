@@ -7,9 +7,9 @@ namespace StudentInfo
         protected void Page_Load(object sender, EventArgs e)
         {
             ltCurUser.Text = "当前用户：游客";
-            if (Session["uName"] != null)
+            if (Session["name"] != null)
             {
-                ltCurUser.Text = "你好，管理员：" + Session["uName"];
+                ltCurUser.Text = "你好，管理员：" + Session["name"];
             }
             else
             {

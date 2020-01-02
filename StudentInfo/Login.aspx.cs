@@ -44,6 +44,7 @@ namespace StudentInfo
             if (students.Count > 0 && cookie.Value == CheckCode.Value)
             {
                 Session["uName"] = students[0].Id;
+                Session["name"] = username;
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>location.href='index_stu.aspx';</script>");
             }
             else
