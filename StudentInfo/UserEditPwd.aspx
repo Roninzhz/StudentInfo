@@ -20,7 +20,7 @@
             <form class="layui-form" runat="server">
                 <div class="layui-form-item">
                     <label for="username" class="layui-form-label">
-                        <span class="x-red">*</span>学生学号
+                        <span class="x-red">*</span>管理员ID
                     </label>
                     <div class="layui-input-inline">
                         <input type="text" id="UserId" name="StudentId" lay-verify="required"

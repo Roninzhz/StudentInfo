@@ -18,28 +18,7 @@
 </head>
 
 <body>
-  <%--  <form id="form1" runat="server">
-    <div class="layui-fluid">
-        <div class="layui-row layui-col-space15">
-            <div class="layui-col-md12">
-                <div class="layui-card">
-                    <div class="layui-card-body ">
-                        
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>--%>
      <div class="x-nav">
-        <%--<span class="layui-breadcrumb">
-            <a href="#">首页</a>
-            <a href="#">演示</a>
-            <a>
-                <cite>导航元素</cite></a>--%>
-        <%--</span>--%>
         <a class="layui-btn layui-btn-small" style="line-height: 1.6em; margin-top: 3px; float: right" onclick="location.reload()" title="刷新">
             <i class="layui-icon layui-icon-refresh" style="line-height: 30px"></i></a>
     </div>
@@ -57,7 +36,7 @@
                             </div>
                         </div>
                         <div class="layui-card-body ">
-                            <asp:Chart ID="Chart1" runat="server">
+                            <asp:Chart ID="Chart1" runat="server" Height="362px" Width="471px">
                             <Titles>
                                 <asp:Title Font="微软雅黑, 16pt" Name="Title1" Text="个人情况统计表">
                                 </asp:Title>
