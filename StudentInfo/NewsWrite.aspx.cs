@@ -18,21 +18,28 @@ namespace StudentInfo
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            if (Session["uName"]!=null&&desc1.Value!=""&&content.Value!="")
-            {
                 DALnew dal = new DALnew();
                 newEntity news = new newEntity();
                 news.Title = desc1.Value;
                 news.Content = content.Value;
-                news.Author = Session["uName"].ToString();
+                news.Author = Session["name"].ToString();
                 news.ReleaseTime = System.DateTime.Now;
+                if (FileUpload1.HasFile)
+                {
+                    int startPosition = FileUpload1.FileName.LastIndexOf(".");
+                    string extName = FileUpload1.FileName.Substring(startPosition).ToLower();
+                    string path = Server.MapPath("./File/");
+                    string fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + extName;
+
+                    string saveFile = path + fileName;
+                    string showFile = "./File/" + fileName;
+
+                    FileUpload1.SaveAs(saveFile);
+                    news.RelateFile = showFile;
+
+                }
                 dal.Addnews(news);
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻编辑成功!');</script>");
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻编辑失败！');</script>");
-            }
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('新闻发布成功!');</script>");
         }
     }
 }
