@@ -18,13 +18,16 @@
     <form id="form1" runat="server">
         <asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>
         <div class="layui-card-body " style="width:auto; left: -30px; top: 2px;">
-            <asp:GridView ID="grdusers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
-                CssClass="layui-table layui-form" PageSize="3" style="margin-right: 0" DataSourceID="Sqladmin">
+            <asp:GridView ID="grdcourse" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
+                CssClass="layui-table layui-form" PageSize="3" style="margin-right: 0" DataSourceID="Sqlcourse">
                 <Columns>
-                   
+                    <asp:BoundField DataField="CourseName" HeaderText="课程名" SortExpression="CourseName" />
+                    <asp:BoundField DataField="CourseTeacher" HeaderText="授课教师" SortExpression="CourseTeacher" />
+                    <asp:BoundField DataField="CourseInfo" HeaderText="课程信息" SortExpression="CourseInfo" />
+                    <asp:BoundField DataField="CourseStudentNum" HeaderText="可选人数" SortExpression="CourseStudentNum" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [course]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="Sqlcourse" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [course]"></asp:SqlDataSource>
         </div>
     </form>
     </body>
