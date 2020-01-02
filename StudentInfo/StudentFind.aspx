@@ -21,7 +21,7 @@
             <a href="#">演示</a>
             <a>
                 <cite>导航元素</cite></a>--%>
-        </span>
+        <%--</span>--%>
         <a class="layui-btn layui-btn-small" style="line-height: 1.6em; margin-top: 3px; float: right" onclick="location.reload()" title="刷新">
             <i class="layui-icon layui-icon-refresh" style="line-height: 30px"></i></a>
     </div>
@@ -45,7 +45,7 @@
                         <div class="layui-card-body ">
                             <asp:GridView ID="grdusers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
                                 CssClass="layui-table layui-form" PageSize="3" OnRowCommand="grdusers_RowCommand"
-                                OnRowCreated="grdusers_RowCreated" style="margin-top: 8px">
+                                OnRowCreated="grdusers_RowCreated" Style="margin-top: 8px">
                                 <Columns>
                                     <asp:BoundField DataField="StudentId" HeaderText="学号" SortExpression="StudentId" />
                                     <asp:BoundField DataField="StudentPassword" HeaderText="学生密码" SortExpression="StudentPassword" />
@@ -59,11 +59,11 @@
                                     <asp:BoundField DataField="StudentAddress" HeaderText="住址" SortExpression="StudentAddress" />
                                     <asp:TemplateField HeaderText="操作">
                                         <ItemTemplate>
-                                             <asp:LinkButton ID="lb1" CommandName="edit" runat="server">编辑</asp:LinkButton>||
+                                            <asp:LinkButton ID="lb1" CommandName="edit" runat="server">编辑</asp:LinkButton>||
                                              <asp:LinkButton ID="lb2" CommandName="del" runat="server" OnClientClick="javascript:return confirm('确定删除吗?');">删除</asp:LinkButton>||
                                              <asp:LinkButton ID="lb3" CommandName="reset" runat="server" ToolTip="重置当前用户的密码" OnClientClick="javascript:return confirm('确定重置当前用户的密码吗?');">重置</asp:LinkButton>
                                         </ItemTemplate>
-                                    </asp:TemplateField>    
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [admin_user] WHERE ([UserName] = @UserName)"></asp:SqlDataSource>
