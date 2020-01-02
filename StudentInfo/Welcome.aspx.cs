@@ -15,7 +15,7 @@ namespace StudentInfo
 {
     public partial class Welcome : System.Web.UI.Page
     {
-        public static string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\DataBase\\StudentInfo.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Git\\DATA\\StudentInfo.mdf;Integrated Security=True;Connect Timeout=30";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

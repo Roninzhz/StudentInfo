@@ -33,11 +33,11 @@
                         <div class="layui-card-body ">
                             <asp:GridView ID="grdnews" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" CssClass="layui-table layui-form" PageSize="3" DataSourceID="Sqlnews" OnRowCommand="grdnews_RowCommand" OnRowCreated="grdnews_RowCreated">
                                 <Columns>
-                                    <asp:BoundField DataField="Id" HeaderText="新闻标号" SortExpression="Id" InsertVisible="False" ReadOnly="True" />
+                                    <%--<asp:BoundField DataField="Id" HeaderText="新闻标号" SortExpression="Id" InsertVisible="False" ReadOnly="True" />--%>
                                     <asp:BoundField DataField="Title" HeaderText="新闻标题" SortExpression="Title" />
                                     <asp:BoundField DataField="Author" HeaderText="作者" SortExpression="Author" />
                                     <asp:BoundField DataField="ReleaseTime" HeaderText="发布时间" SortExpression="ReleaseTime" />
-                                     <asp:TemplateField HeaderText="操作">
+                                     <asp:TemplateField>
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lb1" CommandName="see" runat="server">查看</asp:LinkButton>
                                            </ItemTemplate>
