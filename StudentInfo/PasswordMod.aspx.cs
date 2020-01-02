@@ -8,6 +8,7 @@ namespace StudentInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                     int id = int.Parse(Session["uName"].ToString());
