@@ -38,7 +38,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="am-form-group">
+                <%--<div class="am-form-group">--%>
                     <%-- <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                             <div class="am-u-sm-9">
                                 <input type="text" runat="server" class="tpl-form-input" id="title" placeholder="请输入标题文字">
