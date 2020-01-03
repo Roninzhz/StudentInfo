@@ -21,7 +21,7 @@ namespace StudentInfo
             conditon = "(StudentId is not null and StudentId<>' ')";
             if (!string.IsNullOrEmpty(ddlsource.SelectedValue))
             {
-                conditon += " and CourseId='" + ddlsource.SelectedValue + "' and StudentId='" + Session["uName"] + "'";
+                conditon += " and CourseId='" + ddlsource.SelectedValue + "' and StudentId='" + Session["name"] + "'";
             }
             DALstudent_course dal = new DALstudent_course();
             IList<student_courseEntity> Course = dal.Getstudent_coursesbyCondition(conditon);
