@@ -18,22 +18,17 @@
     <form id="form1" runat="server">
         <asp:Button ID="btnout" runat="server" Text="导出数据" CssClass="layui-btn" OnClick="btnout_Click"/>
         <div class="layui-card-body " style="width:auto; left: -30px; top: 2px;">
-            <asp:GridView ID="grdusers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
-                CssClass="layui-table layui-form" PageSize="3" style="margin-right: 0">
+            <asp:GridView ID="grdcourse_stu" runat="server" AutoGenerateColumns="False"
+                CssClass="layui-table layui-form" PageSize="3" style="margin-right: 0" DataSourceID="Sqlcourse_stu">
                 <Columns>
-                    <asp:BoundField DataField="StudentId" HeaderText="学号" SortExpression="StudentId" />
-                    <asp:BoundField DataField="StudentPassword" HeaderText="学生密码" SortExpression="StudentPassword" />
-                    <asp:BoundField DataField="StudentName" HeaderText="姓名" SortExpression="StudentName" />
-                    <asp:BoundField DataField="StudentSex" HeaderText="性别" SortExpression="StudentSex" />
-                    <asp:BoundField DataField="StudentNation" HeaderText="民族" SortExpression="StudentNation" />
-                    <asp:BoundField DataField="StudentTelehpone" HeaderText="联系方式" SortExpression="StudentTelehpone" />
-                    <asp:BoundField DataField="StudentQQ" HeaderText="QQ" SortExpression="StudentQQ" />
-                    <asp:BoundField DataField="StudentClass" HeaderText="班级" SortExpression="StudentClass" />
-                    <asp:BoundField DataField="StudentDormitory" HeaderText="宿舍号" SortExpression="StudentDormitory" />
-                    <asp:BoundField DataField="StudentAddress" HeaderText="住址" SortExpression="StudentAddress" />
+                    <asp:BoundField DataField="CourseName" HeaderText="已选课程" SortExpression="CourseName" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="Sqladmin" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="SELECT * FROM [student_info] WHERE ([StudentName] = @StudentName)"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="Sqlcourse_stu" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select c.CourseName from course c join student_course s on s.CourseId=c.CourseId WHERE ([StudentId] = @StudentId)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="StudentId" SessionField="name" />
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
     </form>
 </body>

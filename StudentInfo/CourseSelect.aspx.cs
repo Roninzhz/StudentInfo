@@ -23,7 +23,7 @@ namespace StudentInfo
         public void BindSelectCourese()
         {
             DALstudent_course dal = new DALstudent_course();
-            IList<student_courseEntity> scs = dal.Getstudent_coursesbyCondition("StudentId='" + Session["name"].ToString() + "'");
+            IList<student_courseEntity> scs = dal.Getstudent_coursesbyCondition("StudentId='" + Session["uName"].ToString() + "'");
             if (scs.Count > 0)
             {
                 Button1.Enabled = false;
