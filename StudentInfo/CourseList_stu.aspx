@@ -24,9 +24,9 @@
                     <asp:BoundField DataField="CourseName" HeaderText="已选课程" SortExpression="CourseName" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="Sqlcourse_stu" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select c.CourseName from course c join student_course s on s.CourseId=c.CourseId WHERE ([StudentId] = @StudentId)">
+            <asp:SqlDataSource ID="Sqlcourse_stu" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select c.CourseName from course c join student_course s on s.CourseId=c.Id WHERE ([StudentId] = @StudentId)">
                 <SelectParameters>
-                    <asp:SessionParameter Name="StudentId" SessionField="name" />
+                    <asp:SessionParameter Name="StudentId" SessionField="uName" />
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>

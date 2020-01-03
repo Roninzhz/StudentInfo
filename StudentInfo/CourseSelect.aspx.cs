@@ -111,7 +111,7 @@ namespace StudentInfo
                 {
                     sc = new student_courseEntity();
                     sc.CourseId = li.Value;
-                    sc.StudentId = Convert.ToInt32(Session["name"]);
+                    sc.StudentId = Convert.ToInt32(Session["uName"]);
                     dal.Addstudent_course(sc);
                     ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('选课成功！');</script>");
                 }
