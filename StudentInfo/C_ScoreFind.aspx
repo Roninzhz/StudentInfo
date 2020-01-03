@@ -35,7 +35,11 @@
                     <form runat="server">
                          <asp:DropDownList ID="ddlsource" runat="server" DataSourceID="sqlcourse" DataTextField="CourseName" DataValueField="CourseId" Height="32px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="Sqlcourse" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="Sqlcourse" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id where StudentId=@StudentId">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="studentId" SessionField="name" />
+                            </SelectParameters>
+                         </asp:SqlDataSource>
                         <%--<div class="layui-card-body ">--%>
                             <div class="layui-inline layui-show-xs-block">
                                  
@@ -47,21 +51,30 @@
                                 <%--<asp:Button ID="btnout" runat="server" CssClass="layui-btn" Text="导出数据" OnClick="btnout_Click"></asp:Button>--%>
                             </div>
                         </div> 
-                        <div class="layui-card-body ">
-                            <asp:GridView ID="grdcourse" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
-                                CssClass="layui-table layui-form" PageSize="3" style="margin-top: 8px"  DataSourceID="Sqlcourseinfo" DataTextField="CourseName" DataValueField="CourseId">
-                                <Columns>
-                                </Columns>
-                            </asp:GridView>
-                            <asp:SqlDataSource ID="Sqlcourseinfo" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id"></asp:SqlDataSource>
-                        </div>
+                        
                         <div class="layui-card-body ">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  CssClass="layui-table layui-form">
                             <Columns>
                                 <asp:BoundField DataField="CourseScore" HeaderText="该课程成绩为：" SortExpression="CourseScore" />
                             </Columns>
                         </asp:GridView>
-
+                        </div>
+                        <div class="layui-card-body ">
+                            <asp:GridView ID="grdcourse" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"
+                                CssClass="layui-table layui-form" PageSize="3" style="margin-top: 8px"  DataSourceID="Sqlcourseinfo" DataTextField="CourseName" DataValueField="CourseId">
+                                <Columns>
+                                    <asp:BoundField DataField="StudentId" HeaderText="学号" SortExpression="StudentId" />
+                                    <asp:BoundField DataField="CourseId" HeaderText="课程号" SortExpression="CourseId" />
+                                    <%--<asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />--%>
+                                    <asp:BoundField DataField="CourseName" HeaderText="课程名" SortExpression="CourseName" />
+                                    <asp:BoundField DataField="CourseScore" HeaderText="成绩" SortExpression="CourseScore" />
+                                </Columns>
+                            </asp:GridView>
+                            <asp:SqlDataSource ID="Sqlcourseinfo" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id  where StudentId=@StudentId">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="studentId" SessionField="name" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
                         </div>
                     </form>
                 </div>

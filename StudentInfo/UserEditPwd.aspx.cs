@@ -55,7 +55,7 @@ namespace StudentInfo
         protected void btnedit_Click(object sender, EventArgs e)
         {
             DALadmin_user dal = new DALadmin_user();
-            admin_userEntity admin = (admin_userEntity)ViewState["admin"];//获取缓存数据
+            admin_userEntity admin = (admin_userEntity)ViewState["user"];//获取缓存数据
             if (admin.UserPassword == Password1.Value)
             {
                 admin.UserPassword = L_repass.Value;
