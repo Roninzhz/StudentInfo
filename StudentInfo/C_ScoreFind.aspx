@@ -33,9 +33,9 @@
                         <button class="layui-btn" onclick="xadmin.open('添加学生','StudentAdd.aspx',800,600)"><i class="layui-icon"></i>添加</button>
                     </div>--%>
                     <form runat="server">
-                         <asp:DropDownList ID="ddlsource" runat="server" DataSourceID="sqlCourse" DataTextField="CourseName" DataValueField="CourseId">
+                         <asp:DropDownList ID="ddlsource" runat="server" DataSourceID="sqlcourse" DataTextField="CourseName" DataValueField="CourseId" Height="32px">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="Sqlcourse" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.CourseId"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="Sqlcourse" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id"></asp:SqlDataSource>
                         <%--<div class="layui-card-body ">--%>
                             <div class="layui-inline layui-show-xs-block">
                                  
@@ -53,7 +53,7 @@
                                 <Columns>
                                 </Columns>
                             </asp:GridView>
-                            <asp:SqlDataSource ID="Sqlcourseinfo" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.CourseId"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="Sqlcourseinfo" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,s.CourseId,s.Id,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.Id"></asp:SqlDataSource>
                         </div>
                         <div class="layui-card-body ">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"  CssClass="layui-table layui-form">

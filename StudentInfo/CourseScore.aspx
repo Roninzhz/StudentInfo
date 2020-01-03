@@ -21,9 +21,9 @@
             <br />
             <br />
             <br />
-            <asp:GridView ID="GridView1" CssClass="layui-table layui-form" DataKeyNames="Id" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound">
+            <asp:GridView ID="GridView1" CssClass="layui-table layui-form" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound">
                 <Columns>
-                    <asp:BoundField HeaderText="姓名" DataField="StudentId" />
+                    <asp:BoundField HeaderText="学号" DataField="StudentId"/>
                     <asp:BoundField HeaderText="课程" DataField="CourseId" />
                     <asp:TemplateField HeaderText="录入成绩">
                         <ItemTemplate>

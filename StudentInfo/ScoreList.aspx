@@ -46,7 +46,7 @@
                                     <asp:BoundField DataField="CourseScore" HeaderText="分数" SortExpression="CourseScore" />
                                 </Columns>
                             </asp:GridView>
-                            <asp:SqlDataSource ID="Sqlscore" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,c.CourseName,s.CourseScore from course c join student_course s on s.CourseId=c.CourseId "></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="Sqlscore" runat="server" ConnectionString="<%$ ConnectionStrings:SMDB %>" SelectCommand="select s.StudentId,c.CourseName,s.CourseScore from course c INNER join student_course s on s.CourseId=c.Id"></asp:SqlDataSource>
                         </div>
                     </form>
                 </div>
