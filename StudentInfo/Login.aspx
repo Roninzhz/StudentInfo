@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="./css/xadmin.css" />
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <style type="text/css">
+    </style>
     </head>
 <body class="login-bg">
     <div class="login layui-anim layui-anim-up">
@@ -32,17 +35,17 @@
                 <br />
                 <asp:Label ID="shuaxin" runat="server" Text="看不清，单击验证码换一张"></asp:Label>
             </div>
-            <hr class="hr15" />
             <asp:Button ID="btnsubmit" runat="server" Text="教师登录" OnClick="btnsubmit_Click" Width="150px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnsubmit1" runat="server" Text="学生登录" Width="150px" OnClick="btnsubmit1_Click"/>
             <hr class="hr20" />
         </form>
+        <button onclick="xadmin.open('快捷登录','quiet.aspx',700,500)" ><i></i>快捷登录</button>
     </div>
     <!-- 底部结束 -->
     <%--验证码--%>
     <script type="text/javascript">
-        $("#Image").click(function () {
+        $("#Image").click(function () { 
             $(this).attr("src", "CheckCode.aspx?code=" + (new Date()).getTime());
         });
     </script>

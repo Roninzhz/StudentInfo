@@ -327,7 +327,6 @@ namespace DBUtility
             try
             {
                 //Prepare the command to execute
-
                 //Execute the query, stating that the connection should close when the resulting datareader has been read
                 //OracleDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 //cmd.Parameters.Clear();
@@ -337,7 +336,6 @@ namespace DBUtility
             }
             catch
             {
-
                 //If an error occurs close the connection as the reader will not be used and we expect it to close the connection
                 conn.Close();
                 throw;

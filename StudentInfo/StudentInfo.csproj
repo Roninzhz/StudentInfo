@@ -83,6 +83,7 @@
     <Content Include="lib\layui\font\iconfont.woff" />
     <Content Include="Model\end.txt" />
     <Content Include="Model\top.txt" />
+    <Content Include="quiet.aspx" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />
     <Content Include="ueditor\dialogs\attachment\attachment.css" />
     <Content Include="ueditor\dialogs\attachment\attachment.html" />
@@ -367,6 +368,8 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.eot" />
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -644,6 +647,13 @@
       <DependentUpon>PasswordMod.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quiet.aspx.cs">
+      <DependentUpon>quiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quiet.aspx.designer.cs">
+      <DependentUpon>quiet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ScoreList.aspx.cs">
       <DependentUpon>ScoreList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
